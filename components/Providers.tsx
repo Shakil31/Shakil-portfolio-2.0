@@ -13,7 +13,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
     async function loadMotionEnhancements() {
       const [{ default: Lenis }, { default: gsap }, { ScrollTrigger }] = await Promise.all([
-        import("@studio-freight/lenis"),
+        import("lenis"),
         import("gsap"),
         import("gsap/ScrollTrigger")
       ]);
