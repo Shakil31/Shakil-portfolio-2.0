@@ -60,15 +60,4 @@ npm run build
 npm run start
 ```
 
-## Deploy To Vercel
-
-1. Push this folder to a GitHub repository.
-2. Go to Vercel and choose **Add New Project**.
-3. Import the repository.
-4. Keep the defaults:
-   - Framework: Next.js
-   - Build command: `npm run build`
-   - Output directory: `.next`
-5. Click **Deploy**.
-
 No environment variables are required for this portfolio.
