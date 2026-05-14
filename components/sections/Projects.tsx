@@ -66,12 +66,12 @@ export function Projects() {
             className="mt-9 rounded-3xl border border-white/10 bg-white/[0.035] p-5 backdrop-blur-2xl md:p-6"
           >
             <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <div>
+              <div className="sm:border-r sm:border-white/10 sm:pr-6 sm:mr-6">
                 <p className="font-mono text-xs font-bold uppercase tracking-[0.28em] text-violet-300">GitHub Archive</p>
                 <h3 className="mt-2 font-display text-2xl font-bold text-white">{githubProjectCount.originalProjects}+ original projects</h3>
               </div>
               <p className="max-w-xl text-sm leading-6 text-white/60">
-                Pulled from Shakil&apos;s public GitHub profile: {githubProjectCount.publicRepos} public repositories total, with one fork excluded from the completed-project count.
+                Shakil&apos;s public GitHub profile: {githubProjectCount.publicRepos} public repositories total.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
