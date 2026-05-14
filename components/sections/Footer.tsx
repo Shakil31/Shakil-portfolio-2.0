@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FaGithub, FaHeart, FaLinkedin } from "react-icons/fa";
+﻿import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiEnvelope } from "react-icons/hi2";
 import { contactItems, personal } from "@/lib/data";
 
@@ -28,8 +28,10 @@ export function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-5 flex max-w-7xl flex-col gap-3 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
-        <p>© 2026 Shakil Barua. All rights reserved.</p>
-        <p className="inline-flex items-center gap-2">Built with<bold>BITAVIO</bold></p>
+        <p>(c) 2026 Shakil Barua. All rights reserved.</p>
+        <p className="inline-flex items-center gap-2">
+          Built with <strong className="font-bold text-violet-300">BITAVIO</strong>
+        </p>
       </div>
     </footer>
   );
@@ -38,3 +40,4 @@ export function Footer() {
 function Social({ href, label, icon }: { href: string; label: string; icon: React.ReactNode }) {
   return <Link href={href} target={href.startsWith("http") ? "_blank" : undefined} aria-label={label} className="grid h-11 w-11 place-items-center rounded-full border border-violet-300/45 bg-violet-500/10 text-xl text-white transition hover:-translate-y-1 hover:bg-violet-500/25 hover:shadow-glow">{icon}</Link>;
 }
+
