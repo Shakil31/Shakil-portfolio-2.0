@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --background: #05060d;
+  --foreground: #f8fafc;
+  --font-inter: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-space: "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-jetbrains: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(139, 92, 246, 0.16), transparent 28%),
+    radial-gradient(circle at 85% 30%, rgba(34, 211, 238, 0.12), transparent 26%),
+    linear-gradient(180deg, #05060d 0%, #070812 52%, #05060d 100%);
+  color: var(--foreground);
+  font-family: var(--font-inter), Inter, sans-serif;
+}
+
+body::before {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+body::after {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 1px, transparent 1.4px);
+  background-size: 54px 54px;
+  opacity: 0.18;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.55);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.city-glow {
+  background:
+    linear-gradient(to top, rgba(5, 6, 13, 1), rgba(5, 6, 13, 0)),
+    repeating-linear-gradient(90deg, transparent 0 34px, rgba(139, 92, 246, 0.18) 35px 36px, transparent 37px 62px);
+}
+
+.particle-field {
+  background:
+    radial-gradient(circle at 18% 30%, rgba(139, 92, 246, 0.9) 0 2px, transparent 3px),
+    radial-gradient(circle at 72% 20%, rgba(34, 211, 238, 0.8) 0 1px, transparent 2px),
+    radial-gradient(circle at 84% 62%, rgba(217, 70, 239, 0.75) 0 2px, transparent 3px),
+    radial-gradient(circle at 32% 72%, rgba(255, 255, 255, 0.6) 0 1px, transparent 2px);
+  animation: particles 9s ease-in-out infinite alternate;
+}
+
+@keyframes particles {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.6;
+  }
+  to {
+    transform: translate3d(18px, -22px, 0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  body::before {
+    background-size: 48px 48px;
+  }
+}
